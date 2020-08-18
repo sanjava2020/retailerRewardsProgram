@@ -16,9 +16,9 @@ class RetailerController {
     // Instantiating the static map
     static {
         map = new HashMap<>();
-        map.put(1, 500);
-        map.put(2, 99);
-        map.put(3, 300);
+        map.put(1, 185);
+        map.put(2, 120);
+        map.put(3, 744);
     }
 
     @RequestMapping("/getRewards/{custId}")
@@ -38,10 +38,9 @@ class RetailerController {
         if (amount > 100) {
             int twoPointAmount = amount - 100;
             int twoPointRewards = twoPointAmount * 2;
-            int onePointRewards = amount - 50;
-            return twoPointRewards + onePointRewards;
+            return twoPointRewards + 50;
         } else if (amount > 50) {
-            return amount - 50;
+            return 50;
         } else {
             return 0;
         }
